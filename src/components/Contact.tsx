@@ -50,25 +50,39 @@ export const Contact: React.FC = () => {
     return isValid;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+  
     if (validateForm()) {
       setFormStatus('submitting');
-      
-      // Simulate form submission
-      setTimeout(() => {
-        setFormStatus('success');
-        // Reset form after successful submission
-        setFormData({ name: '', email: '', message: '' });
-        
-        // Reset success message after a delay
-        setTimeout(() => {
-          setFormStatus('idle');
-        }, 5000);
-      }, 1500);
+  
+      try {
+        const response = await fetch('https://formspree.io/f/mblogwlv', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData),
+        });
+  
+        if (response.ok) {
+          setFormStatus('success');
+          setFormData({ name: '', email: '', message: '' });
+  
+          setTimeout(() => {
+            setFormStatus('idle');
+          }, 5000);
+        } else {
+          setFormStatus('error');
+        }
+      } catch (err) {
+        console.error(err);
+        setFormStatus('error');
+      }
     }
   };
+  
 
   return (
     <section 
@@ -83,7 +97,7 @@ export const Contact: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-2 text-white">
             Get In Touch
           </h2>
-          <p className="text-slate-300 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Have questions about AI Lecturer? Reach out to our team for more information or to discuss collaboration opportunities.
           </p>
         </div>

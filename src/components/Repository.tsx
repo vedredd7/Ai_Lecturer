@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Github, Code2 } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 export const Repository: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,10 +38,10 @@ export const Repository: React.FC = () => {
               : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-gray-600">
             Open Source Code
           </h2>
-          <p className="text-slate-300 text-center mb-10 max-w-2xl mx-auto">
+          <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
             Explore our codebase, contribute to the project, and join our community of developers building the future of AI-powered education.
           </p>
 
@@ -56,19 +56,6 @@ export const Repository: React.FC = () => {
               <div>
                 <h3 className="text-lg font-medium text-white">GitHub Repository</h3>
                 <p className="text-sm text-slate-400">Star and fork our project</p>
-              </div>
-            </a>
-            
-            <a 
-              href="https://github.com/your-organization/ai-lecturer" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-6 py-4 bg-slate-800/60 hover:bg-slate-700 border border-slate-700 hover:border-indigo-500/70 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-900/20"
-            >
-              <Code2 size={24} className="text-indigo-400 group-hover:text-indigo-300" />
-              <div>
-                <h3 className="text-lg font-medium text-white">API Documentation</h3>
-                <p className="text-sm text-slate-400">Integrate with our platform</p>
               </div>
             </a>
           </div>

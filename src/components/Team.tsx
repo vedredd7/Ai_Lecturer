@@ -118,16 +118,8 @@ export const Team: React.FC = () => {
       }
     },
     {
-      name: "Venkata Susmitha Duggineni",
-      role: "ML Engineer",
-      socials: {
-        github: "https://github.com/Susi0306",
-        linkedin: "https://www.linkedin.com/in/venkata-susmitha-duggineni/"
-      }
-    },
-    {
       name: "Srikanth Thota",
-      role: "Lead Developer",
+      role: "ML Engineer",
       socials: {
         github: "https://github.com/SrikanthThota159",
         linkedin: "https://www.linkedin.com/in/srikanth-thota-46141022a/"
@@ -142,16 +134,8 @@ export const Team: React.FC = () => {
       }
     },
     {
-      name: "Mounika Aithagoni",
-      role: "Lead Developer",
-      socials: {
-        github: "https://github.com/maith-2",
-        linkedin: "https://www.linkedin.com/in/mounika-aithagoni-0b791a28b/"
-      }
-    },
-    {
       name: "Vedanth Reddy Doddannagari",
-      role: "ML Engineer",
+      role: "Frontend Developer",
       socials: {
         github: "https://github.com/vedanthreddy25",
         linkedin: "https://www.linkedin.com/in/vedanthreddy7/"
@@ -159,10 +143,26 @@ export const Team: React.FC = () => {
     },
     {
       name: "Hima Sai Kuruba",
-      role: "Web Developer",
+      role: "Frontend Developer",
       socials: {
         github: "https://github.com/himasaik004",
         linkedin: "https://www.linkedin.com/in/himasaikuruba/"
+      }
+    },
+    {
+      name: "Venkata Susmitha Duggineni",
+      role: "Backend Developer",
+      socials: {
+        github: "https://github.com/Susi0306",
+        linkedin: "https://www.linkedin.com/in/venkata-susmitha-duggineni/"
+      }
+    },
+    {
+      name: "Mounika Aithagoni",
+      role: "Backend Developer",
+      socials: {
+        github: "https://github.com/maith-2",
+        linkedin: "https://www.linkedin.com/in/mounika-aithagoni-0b791a28b/"
       }
     }
   ];
@@ -179,10 +179,10 @@ export const Team: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-2 text-white">
-            Meet Our <span className="text-gradient">Team</span>
+             <span className="text-gradient">Meet Our Team</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-6 rounded-full"></div>
-          <p className="text-slate-300 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Talented individuals who are passionate about revolutionizing education with AI technology.
           </p>
         </div>

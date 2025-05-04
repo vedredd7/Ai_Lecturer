@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Video, BarChart, Users } from 'lucide-react';
+import { Video, MessageCircle,CheckCircle,Edit} from 'lucide-react';
+
 
 interface FeatureCardProps {
   title: string;
@@ -45,19 +46,19 @@ export const Features: React.FC = () => {
     {
       title: "Interactive Lecture Q&A",
       description: "A real-time Q&A assistant allows users to ask follow-up questions related to the lecture content.",
-      icon: <BarChart size={24} className="text-indigo-400" />,
+      icon: <MessageCircle size={24} className="text-indigo-400" />,
       delay: 500
     },
     {
       title: "Integrated Knowledge Check ",
       description: "A built-in quiz section automatically generated based on the lecture content to assess comprehension and reinforce key concepts.",
-      icon: <Users size={24} className="text-indigo-400" />,
+      icon: <Edit size={24} className="text-indigo-400" />      ,
       delay: 700
     },
     {
       title: "Instant Quiz Feedback",
       description: "After each answer submission, the system provides immediate feedback, displaying the correct answer along with a brief explanation to support learning.",
-      icon: <Users size={24} className="text-indigo-400" />,
+      icon: <CheckCircle size={24} className="text-indigo-400" />,
       delay: 700
     }
   ];

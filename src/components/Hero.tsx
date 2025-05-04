@@ -3,7 +3,7 @@ import { ArrowDown } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const phrases = ['Automated Course Content', 'Lecture Video Generation', 'Interactive Learning', 'AI-Powered Education'];
+  const phrases = ['Lecture Video Generation', 'Interactive Learning', 'AI-Powered Education'];
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
   const [typeIndex, setTypeIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
@@ -129,20 +129,24 @@ export const Hero: React.FC = () => {
         </div>
         
         <p className="text-slate-300 max-w-xl mx-auto mb-8 leading-relaxed">
-          Transform education with AI-generated lectures, adaptive learning paths, and interactive content tailored to each student's unique needs.
+          Transform education with AI-generated lectures, Interactive Lecture Q&A , Integrated Knowledge Check and Instant Quiz Feedback.
         </p>
         
         <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-4">
-          <button 
+        <a href="https://your-project-website.com" target="_blank" rel="noopener noreferrer">
+          <button
             className="group relative px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full font-medium transition-all duration-300 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 overflow-hidden"
           >
             <span className="relative z-10">Get Started</span>
             <span className="absolute inset-0 bg-gradient-to-r from-indigo-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </button>
+        </a>
           <button 
             className="group relative px-8 py-3 bg-transparent border border-indigo-400 text-indigo-300 hover:text-white rounded-full font-medium transition-all duration-300 overflow-hidden"
           >
-            <span className="relative z-10">Learn More</span>
+            <a href="#features" className="relative z-10">
+              Learn More
+            </a>
             <span className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </button>
         </div>
