@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://github.com/UNH-TCOE-ECECS/S25-S1-Team3" 
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-slate-800 hover:bg-indigo-600 transition-colors duration-300"
                 aria-label="Github"
               >
@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
                 <Linkedin size={20} />
   </a> */}
               <a 
-                href="#" 
+                href="#contact" 
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-slate-800 hover:bg-emerald-600 transition-colors duration-300"
                 aria-label="Email"
               >
@@ -53,9 +53,6 @@ export const Footer: React.FC = () => {
                 <a href="#features" className="text-slate-400 hover:text-indigo-400 transition-colors duration-300 inline-block">Features</a>
               </li>
               <li>
-                <a href="#docs" className="text-slate-400 hover:text-indigo-400 transition-colors duration-300 inline-block">Documentation</a>
-              </li>
-              <li>
                 <a href="#team" className="text-slate-400 hover:text-indigo-400 transition-colors duration-300 inline-block">Team</a>
               </li>
               <li>
@@ -68,10 +65,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4 text-white">Resources</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-slate-400 hover:text-indigo-400 transition-colors duration-300 inline-block">Tutorials</a>
-              </li>
-              <li>
-                <a href="#repo" className="text-slate-400 hover:text-indigo-400 transition-colors duration-300 inline-block">API Documentation</a>
+                <a href="#docs" className="text-slate-400 hover:text-indigo-400 transition-colors duration-300 inline-block">Documentation</a>
               </li>
               <li>
                 <a href="#contact" className="text-slate-400 hover:text-indigo-400 transition-colors duration-300 inline-block">Contact Us</a>

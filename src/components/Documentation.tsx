@@ -26,7 +26,7 @@ export const Documentation: React.FC = () => {
   const tabs = [
     { id: 'user', label: 'User Guide', icon: <BookText size={20} /> },
     { id: 'developer', label: 'Developer Guide', icon: <Code size={20} /> },
-    { id: 'api', label: 'API Reference', icon: <FileText size={20} /> },
+    { id: 'api', label: 'Final Report', icon: <FileText size={20} /> },
   ];
 
   return (
@@ -96,21 +96,21 @@ export const Documentation: React.FC = () => {
                     <li className="flex items-start gap-3 p-3 rounded-lg bg-slate-700/30 border border-slate-600/30 hover:border-indigo-500/30 transition-colors">
                       <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full w-8 h-8 flex items-center justify-center mt-0.5 text-white font-semibold text-sm">2</div>
                       <div>
-                        <h4 className="text-lg font-medium text-white">Creating Your First Course</h4>
-                        <p className="text-slate-400">Design a curriculum and generate lecture content</p>
+                        <h4 className="text-lg font-medium text-white">Creating Your First Lecture Video</h4>
+                        <p className="text-slate-400"> Input a topic and generate lecture video</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3 p-3 rounded-lg bg-slate-700/30 border border-slate-600/30 hover:border-indigo-500/30 transition-colors">
                       <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full w-8 h-8 flex items-center justify-center mt-0.5 text-white font-semibold text-sm">3</div>
                       <div>
-                        <h4 className="text-lg font-medium text-white">Publishing and Sharing</h4>
-                        <p className="text-slate-400">Make your course available to students</p>
+                        <h4 className="text-lg font-medium text-white">ChatBot and Quiz </h4>
+                        <p className="text-slate-400">Chat with Ai and Complete Quiz</p>
                       </div>
                     </li>
                   </ul>
                   <div className="mt-8">
                     <a 
-                      href="#" 
+                      href="https://drive.google.com/file/d/1Lc5nUs7RnNiHrCMvNBg_-rRwFuue813L/view?usp=drive_link" 
                       className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg shadow-indigo-700/20"
                     >
                       <BookText size={18} />
@@ -136,23 +136,30 @@ export const Documentation: React.FC = () => {
                       <span>script.js</span>
                     </div>
                     <pre className="text-indigo-300 overflow-x-auto scrollbar-hide text-sm">
-                      <code>{`// Sample API usage
-const aiLecturer = new AILecturer({
-  apiKey: 'your-api-key',
-  model: 'advanced-lecture-v2'
-});
+                      <code>{`//1. Clone the repository using Git
+git clone https://github.com/UNH-TCOE-ECECS/S25-S1-Team3.git
 
-// Generate a course outline
-const outline = await aiLecturer.generateOutline({
-  subject: 'Introduction to Machine Learning',
-  numLectures: 10,
-  targetAudience: 'undergraduate'
-});`}</code>
+//2. Setting Up a Virtual Environment (Python)
+
+python -m venv venv
+
+//On Windows
+venv\Scripts\activate
+//On macOS/Linux
+source venv/bin/activate
+
+//3. Installing Python Dependencies
+pip install -r requirements.txt
+
+//4. Running the Project
+python ai_lecturer.py
+ 
+ `}</code>
                     </pre>
                   </div>
                   <div className="mt-6">
                     <a 
-                      href="#" 
+                      href="https://drive.google.com/file/d/1llyO9voD93iACALSlLjxG2KO-lBu412u/view?usp=drive_link" 
                       className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg shadow-indigo-700/20"
                     >
                       <Code size={18} />
@@ -164,71 +171,44 @@ const outline = await aiLecturer.generateOutline({
 
               {activeTab === 'api' && (
                 <div className="animate-fadeIn">
-                  <h3 className="text-2xl font-semibold text-white mb-4">API Reference</h3>
+                  <h3 className="text-2xl font-semibold text-white mb-4">Final Report</h3>
                   <p className="text-slate-300 mb-4">
-                    Complete API documentation with endpoints, parameters, and example responses.
                   </p>
-                  <div className="mt-6 space-y-4">
-                    <div className="border border-slate-700 rounded-lg overflow-hidden hover:border-indigo-500/30 transition-colors shadow-sm">
-                      <div className="bg-slate-700 px-4 py-2 flex justify-between items-center">
-                        <div className="flex items-center gap-2">
-                          <span className="px-2 py-1 text-xs bg-green-700 text-green-100 rounded font-mono">GET</span>
-                          <span className="text-white font-mono text-sm">/api/v1/courses</span>
-                        </div>
-                        <span className="text-xs text-slate-300">List all courses</span>
+                  <ul className="space-y-4 mt-6">
+                    <li className="flex items-start gap-3 p-3 rounded-lg bg-slate-700/30 border border-slate-600/30 hover:border-indigo-500/30 transition-colors">
+                      <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full w-8 h-8 flex items-center justify-center mt-0.5 text-white font-semibold text-sm">1</div>
+                      <div>
+                        <h4 className="text-lg font-medium text-white">Project Overview</h4>
+                        <p className="text-slate-400">AI Lecturer automates the creation of lecture slides, narrated videos, and quizzes using AI, simplifying the content creation process for educators.</p>
                       </div>
-                      <div className="p-4 bg-slate-900/80">
-                        <p className="text-slate-400 text-sm mb-2">Response format:</p>
-                        <pre className="text-indigo-300 text-xs overflow-x-auto">
-                          <code>{`{
-  "courses": [
-    {
-      "id": "course_123",
-      "title": "Introduction to Machine Learning",
-      "lectures": 10,
-      "created_at": "2025-03-15T14:30:00Z"
-    },
-    // ...
-  ],
-  "total": 42,
-  "page": 1
-}`}</code>
-                        </pre>
+                    </li>
+                    <li className="flex items-start gap-3 p-3 rounded-lg bg-slate-700/30 border border-slate-600/30 hover:border-indigo-500/30 transition-colors">
+                      <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full w-8 h-8 flex items-center justify-center mt-0.5 text-white font-semibold text-sm">2</div>
+                      <div>
+                        <h4 className="text-lg font-medium text-white">System Architecture</h4>
+                        <p className="text-slate-400"> The system generates structured content through GPT-4, converts it into slides with Reveal.js, narrates using gTTS, and creates videos with MoviePy, alongside quizzes and a GPT-4-powered chatbot.</p>
                       </div>
-                    </div>
-                    
-                    <div className="border border-slate-700 rounded-lg overflow-hidden hover:border-indigo-500/30 transition-colors shadow-sm">
-                      <div className="bg-slate-700 px-4 py-2 flex justify-between items-center">
-                        <div className="flex items-center gap-2">
-                          <span className="px-2 py-1 text-xs bg-blue-700 text-blue-100 rounded font-mono">POST</span>
-                          <span className="text-white font-mono text-sm">/api/v1/courses</span>
-                        </div>
-                        <span className="text-xs text-slate-300">Create a new course</span>
+                    </li>
+                    <li className="flex items-start gap-3 p-3 rounded-lg bg-slate-700/30 border border-slate-600/30 hover:border-indigo-500/30 transition-colors">
+                      <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full w-8 h-8 flex items-center justify-center mt-0.5 text-white font-semibold text-sm">3</div>
+                      <div>
+                        <h4 className="text-lg font-medium text-white">Impact and Future Scope </h4>
+                        <p className="text-slate-400">It reduces educators' workload, enhances student engagement, and has potential for LMS integration and future improvements like avatar-based narration.</p>
                       </div>
-                      <div className="p-4 bg-slate-900/80">
-                        <p className="text-slate-400 text-sm mb-2">Request body:</p>
-                        <pre className="text-indigo-300 text-xs overflow-x-auto">
-                          <code>{`{
-  "title": "Advanced Neural Networks",
-  "description": "Deep dive into neural network architectures",
-  "target_audience": "graduate",
-  "num_lectures": 12
-}`}</code>
-                        </pre>
-                      </div>
-                    </div>
-                  </div>
+                    </li>
+                  </ul>
+                 
                   <div className="mt-6">
                     <a 
                       href="#" 
                       className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg shadow-indigo-700/20"
                     >
                       <FileText size={18} />
-                      <span>View Complete API Reference</span>
+                      <span>View Complete Report</span>
                     </a>
                   </div>
                 </div>
-              )}
+              )} 
             </div>
           </div>
         </div>
