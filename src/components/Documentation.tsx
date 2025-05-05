@@ -111,7 +111,7 @@ export const Documentation: React.FC = () => {
                   </ul>
                   <div className="mt-8">
                     <a 
-                      href="https://github.com/UNH-TCOE-ECECS/S25-S1-Team3/blob/dev/docs/developer_doc.md" 
+                      href="https://github.com/UNH-TCOE-ECECS/S25-S1-Team3/blob/dev/docs/user_doc.md" 
                       className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg shadow-indigo-700/20"
                     >
                       <BookText size={18} />
@@ -160,7 +160,7 @@ python ai_lecturer.py
                   </div>
                   <div className="mt-6">
                     <a 
-                      href="https://github.com/UNH-TCOE-ECECS/S25-S1-Team3/blob/dev/docs/user_doc.md" 
+                      href="  https://github.com/UNH-TCOE-ECECS/S25-S1-Team3/blob/dev/docs/developer_doc.md" 
                       className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg shadow-indigo-700/20"
                     >
                       <Code size={18} />
