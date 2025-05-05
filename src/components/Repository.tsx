@@ -47,7 +47,7 @@ export const Repository: React.FC = () => {
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10">
             <a 
-              href="https://github.com/your-organization/ai-lecturer" 
+              href="https://github.com/UNH-TCOE-ECECS/S25-S1-Team3" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group flex items-center gap-3 px-6 py-4 bg-slate-800/60 hover:bg-slate-700 border border-slate-700 hover:border-indigo-500/70 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-900/20"
