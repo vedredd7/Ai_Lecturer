@@ -133,28 +133,20 @@ export const Hero: React.FC = () => {
         </p>
         
         <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-4">
-        <a href="https://your-project-website.com" target="_blank" rel="noopener noreferrer">
+        <a href="#repo" className="relative z-10">
           <button
             className="group relative px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full font-medium transition-all duration-300 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 overflow-hidden"
           >
-            <span className="relative z-10">Get Started</span>
+            <span className="relative z-10"> Learn More</span>
             <span className="absolute inset-0 bg-gradient-to-r from-indigo-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </button>
-        </a>
-          <button 
-            className="group relative px-8 py-3 bg-transparent border border-indigo-400 text-indigo-300 hover:text-white rounded-full font-medium transition-all duration-300 overflow-hidden"
-          >
-            <a href="#features" className="relative z-10">
-              Learn More
-            </a>
-            <span className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-          </button>
+      </a>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce z-10"
+        className="absolute bottom-8 left-1/36 transform -translate-x-1/2 cursor-pointer animate-bounce z-10"
         onClick={scrollToRepo}
       >
         <div className="p-2 rounded-full bg-white/10 backdrop-blur-sm">

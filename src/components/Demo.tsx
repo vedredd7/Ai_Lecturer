@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { ArrowRight, ArrowLeft } from "lucide-react";
+//import { ArrowRight, ArrowLeft } from "lucide-react";
 
 
 export const Demo: React.FC = () => {
@@ -8,11 +8,11 @@ export const Demo: React.FC = () => {
   const [progress, setProgress] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const videoContainerRef = useRef<HTMLDivElement>(null);
-  const [videoIndex, setVideoIndex] = useState(0);
+  const [videoIndex] = useState(0);
+//  const [videoIndex, setVideoIndex] = useState(0);
+
   const videoUrls = [
-  "https://www.youtube.com/embed/CdkMWrpYWlA?rel=0&autoplay=0&mute=1",
-  "https://www.youtube.com/embed/dM7bpcaH9c4?rel=0&autoplay=0&mute=1"
-  ];
+  "https://www.youtube.com/embed/CdkMWrpYWlA?rel=0&autoplay=0&mute=1"  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -51,7 +51,7 @@ export const Demo: React.FC = () => {
     return () => clearInterval(interval);
   }, [isPlaying, progress]);
 
-  const handleNextVideo = () => {
+{/*  const handleNextVideo = () => {
     setVideoIndex((prevIndex) => (prevIndex + 1) % videoUrls.length);
   };
   
@@ -60,7 +60,7 @@ export const Demo: React.FC = () => {
       (prevIndex - 1 + videoUrls.length) % videoUrls.length
     );
   };
-  
+*/}
   return (
     <section 
       id="demo" 
@@ -97,12 +97,12 @@ export const Demo: React.FC = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
-              <button
+             {/*} <button
   onClick={handlePrevVideo}
   className="absolute bottom-8 left-4 bg-indigo-600 text-white p-2 rounded-full hover:bg-indigo-700 transition shadow-lg"
   aria-label="Previous video"
 >
-  <ArrowLeft className="w-5 h-5" />
+ <ArrowLeft className="w-5 h-5" />
 </button>
 
 <button
@@ -112,7 +112,7 @@ export const Demo: React.FC = () => {
 >
   <ArrowRight className="w-5 h-5" />
 </button>
-
+          */}
             </div>
           </div>
 

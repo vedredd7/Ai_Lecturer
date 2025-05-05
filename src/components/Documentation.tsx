@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { BookText, Code, FileText } from 'lucide-react';
+import { BookText, Code,FileText} from 'lucide-react';
 
 export const Documentation: React.FC = () => {
   const [activeTab, setActiveTab] = useState('user');
@@ -26,7 +26,7 @@ export const Documentation: React.FC = () => {
   const tabs = [
     { id: 'user', label: 'User Guide', icon: <BookText size={20} /> },
     { id: 'developer', label: 'Developer Guide', icon: <Code size={20} /> },
-    { id: 'api', label: 'Final Report', icon: <FileText size={20} /> },
+    { id: 'api', label: 'Presentation', icon: <FileText size={20} /> },
   ];
 
   return (
@@ -79,6 +79,7 @@ export const Documentation: React.FC = () => {
             <div className="absolute bottom-0 left-0 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
             
             <div className="relative z-10">
+
               {activeTab === 'user' && (
                 <div className="animate-fadeIn">
                   <h3 className="text-2xl font-semibold text-white mb-4">User Guide</h3>
@@ -110,7 +111,7 @@ export const Documentation: React.FC = () => {
                   </ul>
                   <div className="mt-8">
                     <a 
-                      href="https://drive.google.com/file/d/1Lc5nUs7RnNiHrCMvNBg_-rRwFuue813L/view?usp=drive_link" 
+                      href="https://github.com/UNH-TCOE-ECECS/S25-S1-Team3/blob/dev/docs/developer_doc.md" 
                       className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg shadow-indigo-700/20"
                     >
                       <BookText size={18} />
@@ -159,7 +160,7 @@ python ai_lecturer.py
                   </div>
                   <div className="mt-6">
                     <a 
-                      href="https://drive.google.com/file/d/1llyO9voD93iACALSlLjxG2KO-lBu412u/view?usp=drive_link" 
+                      href="https://github.com/UNH-TCOE-ECECS/S25-S1-Team3/blob/dev/docs/user_doc.md" 
                       className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg shadow-indigo-700/20"
                     >
                       <Code size={18} />
@@ -171,7 +172,7 @@ python ai_lecturer.py
 
               {activeTab === 'api' && (
                 <div className="animate-fadeIn">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Final Report</h3>
+                {/*}  <h3 className="text-2xl font-semibold text-white mb-4">Final Report</h3>
                   <p className="text-slate-300 mb-4">
                   </p>
                   <ul className="space-y-4 mt-6">
@@ -197,6 +198,17 @@ python ai_lecturer.py
                       </div>
                     </li>
                   </ul>
+              */}
+                  <div className="mt-6">
+      <iframe 
+        src="https://docs.google.com/presentation/d/1kO2i_7XUc1T8ozcWYPnY_MTiVsC9PehQ/embed?start=true&loop=true&delayms=3000" 
+        width="100%" 
+        height="600" 
+        frameBorder="0" 
+        allowFullScreen
+        className="rounded-lg border border-slate-600"
+      ></iframe>
+    </div>
                  
                   <div className="mt-6">
                     <a 
@@ -204,11 +216,13 @@ python ai_lecturer.py
                       className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg shadow-indigo-700/20"
                     >
                       <FileText size={18} />
-                      <span>View Complete Report</span>
+                      <span>Download Here</span>
                     </a>
                   </div>
                 </div>
               )} 
+          
+
             </div>
           </div>
         </div>
